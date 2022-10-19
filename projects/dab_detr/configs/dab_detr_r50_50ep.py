@@ -13,8 +13,11 @@ train.max_iter = 375000
 train.clip_grad.enabled = True
 train.clip_grad.params.max_norm = 0.1
 train.clip_grad.params.norm_type = 2
-train.device = "cpu"
+
+#set training devices
+train.device = "cuda"
 model.device = train.device
+
 # modify optimizer config
 optimizer.weight_decay = 1e-4
 optimizer.params.lr_factor_func = lambda module_name: 0.1 if "backbone" in module_name else 1

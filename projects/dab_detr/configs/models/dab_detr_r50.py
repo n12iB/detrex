@@ -80,7 +80,7 @@ model = L(DABDETR)(
     pixel_std=[58.395, 57.120, 57.375],
     freeze_anchor_box_centers=True,
     select_box_nums_for_evaluation=300,
-    device="cpu"
+    device="cuda"
 )
 
 # set aux loss weight dict
